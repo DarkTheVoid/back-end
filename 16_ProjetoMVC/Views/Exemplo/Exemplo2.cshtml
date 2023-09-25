@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Home Page";
+
+    string nome = "Dark";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Olá, @nome</h1>
+    <p>Hoje é @DateTime.Now.ToString("dd/MM/yyyy - hh:mm:ss")</p>
+    <button class="btn btn-outline-info">Clique aqui</button>
+</div>
+
+@{
+    bool mostrarMensagem = true;
+    if (mostrarMensagem == true)
+    {
+
+        <p>Esta é uma mensagem que entrou no if</p>
+    }
+    for (int i = 1; i <= 10; i++)
+    {
+        int res = i * 8;
+        <p>8 X @i = @res</p>
+    }
+}
